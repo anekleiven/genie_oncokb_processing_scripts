@@ -1,5 +1,5 @@
 """
-Step 3 of 3: 
+Step 3: 
 Perform this after running the two scripts:
     01_add_oncotree.py
     02_deduplicate_variants.py 

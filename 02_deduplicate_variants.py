@@ -1,5 +1,5 @@
 """
-Step 2 of 3: 
+Step 2: 
 Perform this step after adding oncotree codes (01_add_oncotree.py)
 Deduplicates variants from GENIE data
 Removes recurring variants (same variant in multiple tumors) to speed up further annotation.

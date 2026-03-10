@@ -1,5 +1,6 @@
 #!/bin/env bash
 
+# Step 4 out of 4
 # This script annotates unique variants with OncoKB annotations
 # Requires a locally installed OncoKB annotator as well as a private OncoKB API token. 
 

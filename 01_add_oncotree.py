@@ -1,5 +1,5 @@
 """
-Step 1 of 3: 
+Step 1: 
 Adds Oncotree codes to variant data my mapping from clinical sample data from GENIE 
 Maps using sample ID (Tumor_Sample_Barcode).
 """ 
