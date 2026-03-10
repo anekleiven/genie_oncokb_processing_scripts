@@ -1,6 +1,8 @@
 # GENIE -> OncoKB processing scripts 🤓🤓
 
-This repository contains small Python scripts that prepare AACR Project GENIE-derived variant data for annotation with the OncoKB annotator. The scripts perform common preprocessing steps (mapping tumour types to OncoTree codes, removing duplicate/recurrent variant records, and formatting columns) so the final file(s) match the expectations of an OncoKB/annotation pipeline.
+This repository contains small Python scripts that prepare AACR Project GENIE-derived variant data for annotation with the OncoKB annotator. The scripts perform common preprocessing steps (mapping tumour types to OncoTree codes, removing duplicate/recurrent variant records, and formatting columns) so the final file(s) match the expectations of an OncoKB annotation pipeline.
+
+The final script includes the instructions for OncoKB annotation. Annotation requires a locally installed OncoKB annotator, as well as a private token from OncoKB. 
 
 Important: the GENIE clinical and genomic data used with these scripts are NOT included in this repository. GENIE data are controlled and subject to data access agreements. Run these scripts only on data you are authorized to use.
 
@@ -24,12 +26,10 @@ These scripts are a preprocessing chain — run them in the order below to trans
 1. `01_add_oncotree.py` — add or map tumour/tissue type columns to OncoTree codes. This harmonises sample tumour type labels with OncoTree so downstream annotation can use the correct tumour context.
 2. `02_deduplicate_variants.py` — remove duplicate or recurrent variants. 
 3. `03_prepare_for_oncokb.py` — final formatting step: rename/select columns and output a MAF-like table with the column set expected by the OncoKB annotator.
+4. `04_oncokb_annotation.sh` - this shell script executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from script 3 and interfaces with the OncoKB Web API. 
 
-Check the top of each script for any script-specific arguments or required input column names.
+Check the top of each script for any script-specific requirements.
 
-## How these scripts relate to OncoKB
-
-The output of `03_prepare_for_oncokb.py` should be a tabular file with the columns and value formats expected by your OncoKB annotation pipeline or the OncoKB annotator tool. These scripts do not perform annotation themselves — they prepare and normalise the inputs so the OncoKB annotator can run reliably.
 
 ## Data policy and citations
 
