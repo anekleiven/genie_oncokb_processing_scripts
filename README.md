@@ -21,12 +21,12 @@ Important: the GENIE clinical and genomic data used with these scripts are NOT i
 
 ## Purpose and workflow 👩🏽‍💻
 
-These scripts are a preprocessing chain — run them in the order below to transform raw GENIE-derived variant tables into MAF-like files suitable for OncoKB annotation.
+These scripts are a preprocessing chain — run them in the order below for correct transformation and annotation. 
 
 1. `01_add_oncotree.py` — add or map tumour/tissue type columns to OncoTree codes. This harmonises sample tumour type labels with OncoTree so downstream annotation can use the correct tumour context.
 2. `02_deduplicate_variants.py` — remove duplicate or recurrent variants. 
 3. `03_prepare_for_oncokb.py` — final formatting step: rename/select columns and output a MAF-like table with the column set expected by the OncoKB annotator.
-4. `04_oncokb_annotation.sh` - this shell script executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from script 3 and interfaces with the OncoKB Web API. 
+4. `04_oncokb_annotation.sh` - this shell script executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from step 3 and interfaces with the OncoKB Web API. 
 
 Check the top of each script for any script-specific requirements.
 
