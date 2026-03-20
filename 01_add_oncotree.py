@@ -126,7 +126,7 @@ def main():
         output_file = os.path.join(os.path.dirname(variant_file), "variants_with_oncotree.txt")
 
     print("=" * 60)
-    print("ADDING ONCOTREE CODES TO VARIANT DATA")
+    print("Adding OncoTree codes to variant data!")
     print("=" * 60)
 
     oncotree_mapping = load_clinical_mapping(clinical_file)

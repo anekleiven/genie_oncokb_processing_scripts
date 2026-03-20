@@ -1,6 +1,6 @@
-# GENIE -> OncoKB processing scripts 🤓🤓
+# GENIE -> OncoKB processing scripts 🧬🧬
 
-This repository contains small Python scripts that prepare AACR Project GENIE-derived variant data for annotation with the OncoKB annotator. The scripts perform common preprocessing steps (mapping tumour types to OncoTree codes, removing duplicate/recurrent variant records, and formatting columns) so the final file(s) match the expectations of an OncoKB annotation pipeline.
+This repository contains small Python scripts that prepare AACR Project GENIE derived variant data for annotation with the OncoKB annotator. The scripts perform common preprocessing steps (mapping tumour types to OncoTree codes, removing duplicate/recurrent variant records, and formatting columns) so the final file(s) match the expectations of an OncoKB annotation pipeline.
 
 The final script includes the instructions for OncoKB annotation. Annotation requires a locally installed OncoKB annotator, as well as a private token from OncoKB. 
 
@@ -23,12 +23,10 @@ Important: the GENIE clinical and genomic data used with these scripts are NOT i
 
 These scripts are a preprocessing chain — run them in the order below for correct transformation and annotation. 
 
-1. `01_add_oncotree.py` — add or map tumour/tissue type columns to OncoTree codes. This harmonises sample tumour type labels with OncoTree so downstream annotation can use the correct tumour context.
-2. `02_deduplicate_variants.py` — remove duplicate or recurrent variants. 
-3. `03_prepare_for_oncokb.py` — final formatting step: rename/select columns and output a MAF-like table with the column set expected by the OncoKB annotator.
-4. `04_oncokb_annotation.sh` - this shell script executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from step 3 and interfaces with the OncoKB Web API. 
-
-Check the top of each script for any script-specific requirements.
+1. `01_add_oncotree.py`: Map Tumor_Sample_Barcode to OncoTree codes. This harmonises sample tumour type labels with OncoTree so downstream annotation can use the correct tumour context.
+2. `02_deduplicate_variants.py`: Remove duplicate or recurrent variants. 
+3. `03_prepare_for_oncokb.py`: Rename/select columns and output a MAF-like table with the column set expected by the OncoKB annotator.
+4. `04_oncokb_annotation.sh`: Shell script that executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from step 3 and interfaces with the OncoKB Web API. Requires a private token from OncoKB. 
 
 
 ## Data policy and citations

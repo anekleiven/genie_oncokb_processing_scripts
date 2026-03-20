@@ -114,7 +114,7 @@ def MAF_formatter(input_file):
     df.to_csv(output_file, sep= "\t", index = False) 
 
     print("\n" + "-" * 70)
-    print(f"✅ MAF-ready file saved successfully at:\n{output_file}")
+    print(f"MAF-ready file saved at:\n{output_file}")
     print("-" * 70)
 
 
