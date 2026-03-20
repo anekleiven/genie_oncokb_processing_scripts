@@ -14,9 +14,11 @@ Important: the GENIE clinical and genomic data used with these scripts are NOT i
 
 1. **Create Virtual Environment:**
 `python -m venv .venv`
+
+2. **Activate Virtual Environment:**
 `. .venv/bin/activate`
 
-2. **Install Python Requirements:**
+3. **Install Python Requirements:**
 `pip install -r requirements.txt`
 
 ## Purpose and workflow 👩🏽‍💻
