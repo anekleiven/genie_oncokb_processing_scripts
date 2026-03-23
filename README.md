@@ -22,19 +22,21 @@ These scripts are a preprocessing chain — run them in the order below for corr
 ## External Data Requirements 
 | File | Source | Used in Script |
 | :--- | :--- | :--- |
-| `data_clinical_sample.txt` | [GENIE data (requires access from synapse.org, synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
-| `data_mutations_extended.txt` | [GENIE data (requires access from synapse.org, synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
+| `data_clinical_sample.txt` | [GENIE data (requires access from synapse.org), synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
+| `data_mutations_extended.txt` | [GENIE data (requires access from synapse.org), synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
 
 ## External Dependencies 
-- OncoKB annotator v.3.4 (MafAnnotator.py): Required for Oncogencity classification of somatic variant data. (https://github.com/oncokb/oncokb-annotator/tree/master)
-  Used in script `04_oncokb_annotations.sh`
+- OncoKB annotator v.3.4 (MafAnnotator.py):  https://github.com/oncokb/oncokb-annotator/tree/master
+  Required for Oncogencity classification of somatic variant data. Used in script `04_oncokb_annotations.sh`
 
 ## Setup Instructions 🔧
 
-1. Clone the repository: 
+1. **Clone the repository:**
+```
+git clone [https://github.com/anekleiven/genie_oncokb_processing_scripts.git](https://github.com/ditt-brukernavn/genie_oncokb_processing_scripts.git)
+cd genie_oncokb_processing_scripts
 
-   git clone [https://github.com/anekleiven/genie_oncokb_processing_scripts.git](https://github.com/ditt-brukernavn/genie_oncokb_processing_scripts.git)
-   cd genie_oncokb_processing_scripts
+```
 
 2. **Create Virtual Environment:**
 `python -m venv .venv`
@@ -46,12 +48,12 @@ These scripts are a preprocessing chain — run them in the order below for corr
 `pip install -r requirements.txt`
 
 
-## Data policy and citations
+## Data Policy and Citations
 
 - AACR Project GENIE data are subject to access controls and a publication policy. Do not share controlled data publicly. Obtain GENIE data only via the official GENIE data access procedures and comply with their terms.
 - OncoKB is a separate resource with its own license and citation requirements. When using OncoKB for annotation or publication, follow OncoKB's licensing and citation instructions.
 
-## Recommended links:
+## Recommended Sources 🛜
 
 - AACR Project GENIE: https://www.aacr.org/professionals/research/aacr-project-genie/
 - Synapse (for access to GENIE data): https://www.synapse.org/
