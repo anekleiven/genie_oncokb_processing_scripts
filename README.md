@@ -1,6 +1,12 @@
 # GENIE -> OncoKB processing scripts 🧬🧬
 
-This repository contains small Python scripts that prepare AACR Project GENIE derived variant data for annotation with the OncoKB annotator. The scripts perform common preprocessing steps (mapping tumour types to OncoTree codes, removing duplicate/recurrent variant records, and formatting columns) so the final file(s) match the expectations of an OncoKB annotation pipeline.
+This repository contains small Python scripts that prepare AACR Project GENIE derived variant data for annotation with the OncoKB annotator. 
+
+The scripts perform common preprocessing steps so the final file(s) match the expectations of an OncoKB annotation pipeline.
+
+- Mapping tumour types to OncoTree codes
+- Removing duplicate/recurrent variant records
+- Formats files to MAF 
 
 The final script includes the instructions for OncoKB annotation. Annotation requires a locally installed OncoKB annotator, as well as a private token from OncoKB. 
 
@@ -29,6 +35,7 @@ These scripts are a preprocessing chain — run them in the order below for corr
 - OncoKB annotator v.3.4 (MafAnnotator.py):  https://github.com/oncokb/oncokb-annotator/tree/master
   Required for Oncogencity classification of somatic variant data. Used in script `04_oncokb_annotations.sh`
 
+
 ## Setup Instructions 🔧
 
 1. **Clone the repository:**
@@ -37,7 +44,6 @@ git clone [https://github.com/anekleiven/genie_oncokb_processing_scripts.git](ht
 cd genie_oncokb_processing_scripts
 
 ```
-
 2. **Create Virtual Environment:**
 `python -m venv .venv`
 
