@@ -12,7 +12,7 @@ The final script includes the instructions for OncoKB annotation. Annotation req
 
 **Important:** the GENIE clinical and genomic data used with these scripts are NOT included in this repository. GENIE data are controlled and subject to data access agreements. Run these scripts only on data you are authorized to use.
 
-## Dataflow 👩🏽‍💻
+## Dataflow 🗒️
 
 These scripts are a preprocessing chain — run them in the order below for correct transformation and annotation. 
 
@@ -25,7 +25,7 @@ These scripts are a preprocessing chain — run them in the order below for corr
 - Python 3.10+
 - R 4.2+
 
-## External Data Requirements 
+## External Data Requirements 💻
 | File | Source | Used in Script |
 | :--- | :--- | :--- |
 | `data_clinical_sample.txt` | [GENIE data (requires access from synapse.org), synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
@@ -54,7 +54,7 @@ cd genie_oncokb_processing_scripts
 `pip install -r requirements.txt`
 
 
-## Data Policy and Citations
+## Data Policy and Citations 🚨
 
 - AACR Project GENIE data are subject to access controls and a publication policy. Do not share controlled data publicly. Obtain GENIE data only via the official GENIE data access procedures and comply with their terms.
 - OncoKB is a separate resource with its own license and citation requirements. When using OncoKB for annotation or publication, follow OncoKB's licensing and citation instructions.
