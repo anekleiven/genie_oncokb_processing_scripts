@@ -6,22 +6,7 @@ The final script includes the instructions for OncoKB annotation. Annotation req
 
 Important: the GENIE clinical and genomic data used with these scripts are NOT included in this repository. GENIE data are controlled and subject to data access agreements. Run these scripts only on data you are authorized to use.
 
-## Requirements 💻
-- Python 3.10+
-- R 4.2+
-
-## Setup Instructions 🔧
-
-1. **Create Virtual Environment:**
-`python -m venv .venv`
-
-2. **Activate Virtual Environment:**
-`. .venv/bin/activate`
-
-3. **Install Python Requirements:**
-`pip install -r requirements.txt`
-
-## Purpose and workflow 👩🏽‍💻
+## Dataflow 👩🏽‍💻
 
 These scripts are a preprocessing chain — run them in the order below for correct transformation and annotation. 
 
@@ -30,13 +15,46 @@ These scripts are a preprocessing chain — run them in the order below for corr
 3. `03_prepare_for_oncokb.py`: Rename/select columns and output a MAF-like table with the column set expected by the OncoKB annotator.
 4. `04_oncokb_annotation.sh`: Shell script that executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from step 3 and interfaces with the OncoKB Web API. Requires a private token from OncoKB. 
 
+## Requirements 💻
+- Python 3.10+
+- R 4.2+
+
+## External Data Requirements 
+| File | Source | Used in Script |
+| :--- | :--- | :--- |
+| `data_clinical_sample.txt` | [GENIE data (requires access from synapse.org, synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
+| `data_mutations_extended.txt` | [GENIE data (requires access from synapse.org, synapse ID: syn68719152](https://www.synapse.org) | `01_add_oncotree.py` |
+
+## External Dependencies 
+- OncoKB annotator v.3.4 (MafAnnotator.py): Required for Oncogencity classification of somatic variant data. (https://github.com/oncokb/oncokb-annotator/tree/master)
+  Used in script `04_oncokb_annotations.sh`
+
+## Setup Instructions 🔧
+
+1. Clone the repository: 
+
+   git clone [https://github.com/anekleiven/genie_oncokb_processing_scripts.git](https://github.com/ditt-brukernavn/genie_oncokb_processing_scripts.git)
+   cd genie_oncokb_processing_scripts
+
+2. **Create Virtual Environment:**
+`python -m venv .venv`
+
+3. **Activate Virtual Environment:**
+`. .venv/bin/activate`
+
+4. **Install Python Requirements:**
+`pip install -r requirements.txt`
+
 
 ## Data policy and citations
 
 - AACR Project GENIE data are subject to access controls and a publication policy. Do not share controlled data publicly. Obtain GENIE data only via the official GENIE data access procedures and comply with their terms.
 - OncoKB is a separate resource with its own license and citation requirements. When using OncoKB for annotation or publication, follow OncoKB's licensing and citation instructions.
 
-Recommended links:
+## Recommended links:
 
 - AACR Project GENIE: https://www.aacr.org/professionals/research/aacr-project-genie/
+- Synapse (for access to GENIE data): https://www.synapse.org/
 - OncoKB: https://www.oncokb.org
+- OncoKB annotator: https://github.com/oncokb/oncokb-annotator
+
