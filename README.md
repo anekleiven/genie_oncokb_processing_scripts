@@ -10,7 +10,7 @@ The scripts perform common preprocessing steps so the final file(s) match the ex
 
 The final script includes the instructions for OncoKB annotation. Annotation requires a locally installed OncoKB annotator, as well as a private token from OncoKB. 
 
-Important: the GENIE clinical and genomic data used with these scripts are NOT included in this repository. GENIE data are controlled and subject to data access agreements. Run these scripts only on data you are authorized to use.
+**Important:** the GENIE clinical and genomic data used with these scripts are NOT included in this repository. GENIE data are controlled and subject to data access agreements. Run these scripts only on data you are authorized to use.
 
 ## Dataflow 👩🏽‍💻
 
