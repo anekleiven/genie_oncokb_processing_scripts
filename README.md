@@ -5,8 +5,8 @@ This repository contains small Python scripts that prepare AACR Project GENIE de
 The scripts perform common preprocessing steps so the final file(s) match the expectations of an OncoKB annotation pipeline.
 
 - Mapping tumour types to OncoTree codes
-- Removing duplicate/recurrent variant records
-- Formats files to MAF 
+- Removing duplicate/recurrent variants
+- Formats variant file to MAF for OncoKB annotation
 
 The final script includes the instructions for OncoKB annotation. Annotation requires a locally installed OncoKB annotator, as well as a private token from OncoKB. 
 
