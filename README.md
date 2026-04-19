@@ -12,6 +12,15 @@ The final script includes the instructions for OncoKB annotation. Annotation req
 
 **Important:** the GENIE clinical and genomic data used with these scripts are NOT included in this repository. GENIE data are controlled and subject to data access agreements. Run these scripts only on data you are authorized to use.
 
+<figure>
+  <p align="center">
+    <img src="images/flowchart.png" alt="Dataflow" width="600">
+  </p>
+  <figcaption align="center">
+    <b>Figure 1:</b> Systematic pipeline for annotating GENIE somatic variant data with OncoKB oncogenicity status. The figure was designed by the author and rendered using the Claude (Anthrophic) language model.
+  </figcaption>
+</figure>
+
 ## Dataflow 🗒️
 
 These scripts are a preprocessing chain — run them in the order below for correct transformation and annotation. 
@@ -20,15 +29,6 @@ These scripts are a preprocessing chain — run them in the order below for corr
 2. `02_deduplicate_variants.py`: Remove duplicate or recurrent variants. Since variants are collected across many tumour samples, the same variant may appear multiple times. Duplicate entries were removed, as repeated occurrences of the same variant within the same tumour type do not contribute additional information.
 3. `03_prepare_for_oncokb.py`: Rename/select columns and output a MAF-like table with the column set expected by the OncoKB annotator.
 4. `04_oncokb_annotation.sh`: Shell script that executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from step 3 and interfaces with the OncoKB Web API. Requires a private token from OncoKB. 
-
-<figure>
-  <p align="center">
-    <img src="images/flowchart.png" alt="Dataflow" width="600">
-  </p>
-  <figcaption align="center">
-    <b>Figure 1:</b> Systematic pipeline for annotating GENIE somatic variant data with OncoKB oncogenicity status.
-  </figcaption>
-</figure>
 
 ## Requirements 💻
 - Python 3.10+
