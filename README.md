@@ -17,7 +17,7 @@ The final script includes the instructions for OncoKB annotation. Annotation req
     <img src="images/flowchart.png" alt="Dataflow" width="600">
   </p>
   <figcaption align="center">
-    <b>Figure 1:</b> Systematic pipeline for annotating GENIE somatic variant data with OncoKB oncogenicity status. The figure was designed by the author and rendered using the Claude (Anthrophic) language model.
+    <b>Figure 1:</b> Systematic pipeline for annotating GENIE somatic variant data with OncoKB oncogenicity status. The figure was designed by the author and rendered using the Claude (Antrophic) language model.
   </figcaption>
 </figure>
 
@@ -32,7 +32,6 @@ These scripts are a preprocessing chain — run them in the order below for corr
 
 ## Requirements 💻
 - Python 3.10+
-- R 4.2+
 
 ## External Data Requirements 💻
 | File | Source | Used in Script |
@@ -49,7 +48,7 @@ These scripts are a preprocessing chain — run them in the order below for corr
 
 1. **Clone the repository:**
 ```
-git clone [https://github.com/anekleiven/genie_oncokb_processing_scripts.git](https://github.com/ditt-brukernavn/genie_oncokb_processing_scripts.git)
+git clone https://github.com/anekleiven/genie_oncokb_processing_scripts.git
 cd genie_oncokb_processing_scripts
 
 ```
