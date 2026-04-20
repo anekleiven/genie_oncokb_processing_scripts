@@ -1,5 +1,5 @@
 /.venv
 /data/
 annotated_output.maf
-/images
+/images/*
 !images/flowchart.png
