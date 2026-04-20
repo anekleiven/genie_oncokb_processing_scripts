@@ -17,7 +17,7 @@ The final script includes the instructions for OncoKB annotation. Annotation req
     <img src="images/flowchart.png" alt="Dataflow" width="600">
   </p>
   <figcaption align="center">
-    <b>Figure 1:</b> Systematic pipeline for annotating GENIE somatic variant data with OncoKB oncogenicity status. The figure was designed by the author and rendered using the Claude (Antrophic) language model.
+    <b>Figure 1:</b> Systematic pipeline for annotating GENIE somatic variant data with OncoKB oncogenicity status. The figure was designed by the author and rendered using the Claude (Anthropic) language model.
   </figcaption>
 </figure>
 
