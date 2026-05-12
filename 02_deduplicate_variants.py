@@ -1,8 +1,10 @@
 """
 Step 2: 
 Perform this step after adding oncotree codes (01_add_oncotree.py)
-Deduplicates variants from GENIE data
-Removes recurring variants (same variant in multiple tumors) to speed up further annotation.
+Deduplicates variants from GENIE data:
+Since the same variant can appear across many tumor samples of the same type, 
+variants are deduplicated per tumor type. Repeated observations of the same 
+variant add no additional biological information.
 """
 
 import pandas as pd
