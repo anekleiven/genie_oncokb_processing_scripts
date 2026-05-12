@@ -31,7 +31,7 @@ These scripts are a preprocessing chain — run them in the order below for corr
 4. `04_oncokb_annotation.sh`: Shell script that executes the locally installed MafAnnotator.py from OncoKB. It passes the processed files from step 3 and interfaces with the OncoKB Web API. Requires a private token from OncoKB. 
 
 ## Requirements 💻
-- Python 3.10+
+- Python 3.12+
 
 ## External Data Requirements 💻
 | File | Source | Used in Script |
