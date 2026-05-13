@@ -89,8 +89,7 @@ def get_args():
     parser = argparse.ArgumentParser(description="deduplicate cancer variants")
     parser.add_argument(
         "--input",
-        required=False,
-        default="data/variants_with_oncotree.txt",
+        required=True,
         help="Path to the input file (e.g. variants_with_oncotree.txt)" 
     )
     return parser.parse_args()

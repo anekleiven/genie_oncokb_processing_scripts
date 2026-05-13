@@ -90,23 +90,20 @@ def get_args():
 
     parser.add_argument(
         "--clinical", 
-        required=False, 
-        default="data/GENIE/data_clinical_sample.txt",
-        help="Path to the clinical sample file (e.g. data/GENIE/data_clinical_sample.txt)"
+        required=True, 
+        help="Path to the clinical sample file (e.g. data_clinical_sample.txt)"
         )
 
     parser.add_argument(
         "--variants", 
-        required=False,
-        default="data/GENIE/data_mutations_extended.txt",
-        help="Path to the variant file (e.g. data/GENIE/data_mutations_extended.txt)"
+        required=True,
+        help="Path to the variant file (e.g. data_mutations_extended.txt)"
         )
 
     parser.add_argument(
         "--output", 
-        required=False, 
-        default="data/variants_with_oncotree.txt",
-        help="Path for the output file (default: data/variants_with_oncotree.txt)"
+        required=True, 
+        help="Path for the output file (e.g. variants_with_oncotree.txt)"
         )
 
     return parser.parse_args()

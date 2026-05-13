@@ -130,8 +130,7 @@ def get_args():
     parser = argparse.ArgumentParser(description="Format variants to MAF format.")
     parser.add_argument(
         "--input",
-        required=False,
-        default="data/unique_variants_with_oncotree.txt",
+        required=True,
         help="Path to the input file (e.g. unique_variants_with_oncotree.txt)"
     )
     return parser.parse_args()
